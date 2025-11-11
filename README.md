@@ -1,4 +1,3 @@
-
 ````markdown
 # 🌿 Plant Watering Management System
 
