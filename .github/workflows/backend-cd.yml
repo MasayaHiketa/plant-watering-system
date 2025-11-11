@@ -2,7 +2,10 @@ name: backend-cd
 
 on:
   push:
-    branches: [ main ]
+    paths:
+      - "backend/**"
+      - ".github/**"
+      - "docker-compose.yml"
 
 jobs:
   build-and-push:
