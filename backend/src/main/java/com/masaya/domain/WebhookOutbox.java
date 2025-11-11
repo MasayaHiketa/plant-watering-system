@@ -1,4 +1,3 @@
-// src/main/java/com/example/plant/domain/WebhookOutbox.java
 package com.masaya.domain;
 
 import jakarta.persistence.*;
@@ -45,6 +44,5 @@ public class WebhookOutbox {
     void onUpdate() {
         this.updatedAt = LocalDateTime.now();
     }
-
     // ====== getter / setter ======
 }
