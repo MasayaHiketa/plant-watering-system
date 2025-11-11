@@ -1,0 +1,30 @@
+
+version: "3.9"
+services:
+  db:
+    image: postgres:17
+    container_name: plantdb
+    environment:
+      POSTGRES_DB: plantdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Pg18@2025
+    ports:
+      - "5434:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  app:
+    build: ./backend
+    container_name: plant-app
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/plantdb
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: Pg18@2025
+      APP_WEBHOOK_WATERING_URL: http://host.docker.internal:8081/webhooks/watering
+    ports:
+      - "8080:8080"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+volumes:
+  pgdata:

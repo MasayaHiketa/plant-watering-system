@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5434/plantdb
+    username: postgres
+    password: Pg18@2025
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+app:
+  webhook:
+    watering-url: ${WEBHOOK_WATERING_URL:http://127.0.0.1:8081/webhooks/watering}
