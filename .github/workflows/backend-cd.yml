@@ -21,7 +21,7 @@ jobs:
         run: cd backend && mvn -B clean package -DskipTests
 
       - name: Build Docker image
-        run: docker build -t masayahiketa/plant-watering-system:latest ./backend
+        run: docker build -t masaya0807/plant-watering-system:latest ./backend
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
@@ -31,4 +31,4 @@ jobs:
 
 
       - name: Push to Docker Hub
-        run: docker push masayahiketa/plant-watering-system:latest
+        run: docker push masaya0807/plant-watering-system:latest
