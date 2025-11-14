@@ -11,7 +11,7 @@
 This system helps users keep track of their plants' watering cycles.  
 Each user can manage their own plant collection, receive schedule reminders, and review past watering logs.
 
-## 🏗️ Architecture
+## Architecture
 ```text
 ┌──────────────────────────┐
 │      Angular UI (S3 + CloudFront)      │
@@ -36,7 +36,7 @@ Each user can manage their own plant collection, receive schedule reminders, and
 
 ---
 
-## 🧰 Tech Stack
+## 📘 Tech Stack
 
 **Backend**
 
