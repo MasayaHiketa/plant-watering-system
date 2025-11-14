@@ -1,17 +1,15 @@
-````markdown
-
-🌿 Plant Watering Management System
+## 📘Plant Watering Management System(持續開發中)
 
 > A full-stack cloud-based system for managing watering and fertilizing schedules of houseplants.  
 > Built with **Spring Boot + PostgreSQL + AWS + Docker + GitHub Actions**, this project demonstrates a practical DevOps-integrated Java backend service.
 
 ---
 
-## 🌱 Overview
+## 📘 Overview
 This system helps users keep track of their plants' watering cycles.  
 Each user can manage their own plant collection, receive schedule reminders, and review past watering logs.
 
-## Architecture
+## 📘Architecture
 ```text
 ┌──────────────────────────┐
 │      Angular UI (S3 + CloudFront)      │
