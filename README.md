@@ -46,7 +46,7 @@ Each user can manage their own plant collection, receive schedule reminders, and
 
 - Docker / Docker Compose
 - GitHub Actions (CI/CD pipeline)
-- AWS EC2（本番デプロイ）
+- AWS EC2
 - 之後預計：ECS / ECR / RDS / CloudFront
 
 ## 📘 Example API Endpoints
