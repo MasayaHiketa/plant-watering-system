@@ -46,7 +46,7 @@ Each user can manage their own plant collection, receive schedule reminders, and
 
 - Docker / Docker Compose
 - GitHub Actions (CI/CD pipeline)
-- AWS EC2
+- AWS EC2(The project is currently successfully deployed on AWS EC2 (Amazon Linux 2023).)
 - 之後預計：ECS / ECR / RDS / CloudFront
 
 ## 📘 Example API Endpoints
@@ -63,4 +63,9 @@ Each user can manage their own plant collection, receive schedule reminders, and
 
 
 ---
-
+## 📘 Next Steps
+- JWT Authentication（取代 Basic Auth）
+- 完整 webhook retry dashboard（前端）
+- Angular 前端（S3 + CloudFront）
+- AWS RDS for PostgreSQL
+- ECS Fargate 自動部署（CI/CD + ECR）
