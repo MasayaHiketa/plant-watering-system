@@ -10,6 +10,8 @@ spring:
   flyway:
     enabled: true
     locations: classpath:db/migration
+
+# Webhook（Local 用）
 app:
   webhook:
-    watering-url: ${WEBHOOK_WATERING_URL:http://127.0.0.1:8081/webhooks/watering}
+    watering-url: http://host.docker.internal:8081/webhooks/watering
