@@ -14,12 +14,14 @@ public class SecurityConfig {
 
     @Bean
     public InMemoryUserDetailsManager userDetailsService() {
-        UserDetails u1 = User.withDefaultPasswordEncoder()
-                .username("masaya")
-                .password("password")
-                .roles("USER")
-                .build();
-        return new InMemoryUserDetailsManager(u1);
+        UserDetails adminUser =
+                User.builder()
+                        .username("masaya")
+                        .password("{noop}password")   // ★ パスワードをエンコードしない
+                        .roles("ADMIN", "USER")       // ★ 順序関係なし
+                        .build();
+
+        return new InMemoryUserDetailsManager(adminUser);
     }
 
     @Bean
@@ -27,8 +29,10 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/", "/error").permitAll()  // ← NEW
+                        .requestMatchers("/", "/error").permitAll()
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")
+                        .requestMatchers("/api/watering/**").authenticated()
+                        .requestMatchers("/api/plants/**").authenticated()
                         .anyRequest().authenticated()
                 )
                 .httpBasic(Customizer.withDefaults());
@@ -36,3 +40,4 @@ public class SecurityConfig {
         return http.build();
     }
 }
+

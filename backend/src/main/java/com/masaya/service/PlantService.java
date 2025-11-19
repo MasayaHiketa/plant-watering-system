@@ -63,10 +63,16 @@ public class PlantService {
             return plant;
         });
     }
-
+    
+    //waterlog by id
     public List<WateringLog> getLogs(Long plantId) {
-        return wateringLogRepository.findByPlantIdOrderByWateredAtDesc(plantId);
+        return wateringLogRepository.findByPlant_IdOrderByWateredAtDesc(plantId);
     }
+    //waterlog by all
+    public List<WateringLog> getAllLogs() {
+    return wateringLogRepository.findAllByOrderByWateredAtDesc();
+    }
+    
 
     //今すぐ“要水やり”の植物を見せて
     public List<Plant> getDueToday() {

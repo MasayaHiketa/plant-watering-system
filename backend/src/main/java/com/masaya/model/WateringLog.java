@@ -60,4 +60,8 @@ public class WateringLog {
     public void setNote(String note) {
         this.note = note;
     }
+
+    public Long getPlantId() {
+        return plant != null ? plant.getId() : null;
+    }
 }
