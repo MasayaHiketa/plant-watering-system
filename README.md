@@ -69,3 +69,4 @@ Each user can manage their own plant collection, receive schedule reminders, and
 - Angular 前端（S3 + CloudFront）
 - AWS RDS for PostgreSQL
 - ECS Fargate 自動部署（CI/CD + ECR）
+- http://15.134.206.172:8501
