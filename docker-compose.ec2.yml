@@ -23,9 +23,11 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/plantdb
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: Pg18@2025
-      APP_WEBHOOK_WATERING_URL: http://127.0.0.1:8081/webhooks/watering
+      #APP_WEBHOOK_WATERING_URL: http://127.0.0.1:8081/webhooks/watering
+      APP_WEBHOOK_WATERING_URL: https://httpbin.org/post
     ports:
       - "8080:8080"
 
 volumes:
   pgdata:
+
